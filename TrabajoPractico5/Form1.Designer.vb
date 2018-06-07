@@ -124,6 +124,7 @@ Partial Class Form1
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1282, 217)
         Me.DataGridView1.TabIndex = 0
+		
         '
         'tiempo
         '
