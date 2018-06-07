@@ -5,7 +5,7 @@
 
         Dim i As Integer
         Dim RND As New Random
-        Dim rnd_llegada As Double
+        
         Dim tiempo_entre_llegadas As Double
         Dim proxima_llegada As Decimal
         Dim rnd_atencion1 As Double
@@ -15,7 +15,7 @@
         Dim fin_atencion1 As Decimal
         Dim fin_atencion2 As Decimal
         Dim rnd_tipo_arreglo As Double
-        Dim tipo As String
+        Dim tipo As String = ""
         Dim tipo_nombre As String
         Dim estado_tec1 As String
         Dim estado_tec2 As String
@@ -36,7 +36,7 @@
 
 
         i = 0
-        N = 0
+        N = 4
         estado_tec1 = "Libre"
         estado_tec2 = "Libre"
         cola = 0
@@ -56,17 +56,17 @@
         estadocomputadora3 = ""
 
         i = 0
-        For i = 0 To N
+        For i = 0 To N + 1
             i += 1
 
             If N = 0 Then
                 'LLEGADA_COMPUTADORA
-                rnd_llegada = RND.NextDouble
+                Dim rnd_llegada As Double = Math.Round(RND.NextDouble,4)
                 tiempo_entre_llegadas = ((rnd_llegada * (b_llegada.Text - a_llegada.Text)) + a_llegada.Text)
                 proxima_llegada = N + tiempo_entre_llegadas
                 contador_comp = 0
                 cont_no_atendidas = 0
-                evento = ""
+                evento = "Inicializacion"
                 cola = 0
                 estado_tec1 = "Libre"
                 estado_tec2 = "Libre"
@@ -87,7 +87,7 @@
                     evento = "Llegada computadora"
                     contador_comp += 1
                     'LLEGADA_COMPUTADORA
-                    rnd_llegada = RND.NextDouble
+                     Dim rnd_llegada As Double = Math.Round(RND.NextDouble,4)
                     tiempo_entre_llegadas = ((rnd_llegada * (b_llegada.Text - a_llegada.Text)) + a_llegada.Text)
                     proxima_llegada = N + tiempo_entre_llegadas
                     acum_tiempo_atencion += proxima_llegada - N
@@ -358,26 +358,26 @@
                     'CLACULAR TIEMPO ARREGLO
                     Select Case tipo
                         Case "A"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_placa.Text - a_placa.Text)) + a_placa.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "B"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_ampliacion.Text - a_ampliacion.Text)) + a_ampliacion.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "C"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_formateo.Text - a_formateo.Text)) + a_formateo.Text)
                             fin_atencion1 = N + tiempo_atencion1
                             fin_15c1 = N + 15
                             fin_15c2 = fin_atencion1 - 15
 
                         Case "D"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_agregar.Text - a_agregar.Text)) + a_agregar.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "E"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_cambio.Text - a_cambio.Text)) + a_cambio.Text)
                             fin_atencion1 = N + tiempo_atencion1
                     End Select
@@ -447,26 +447,26 @@
                     'CLACULAR TIEMPO ARREGLO
                     Select Case tipo
                         Case "A"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_placa.Text - a_placa.Text)) + a_placa.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "B"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_ampliacion.Text - a_ampliacion.Text)) + a_ampliacion.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "C"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_formateo.Text - a_formateo.Text)) + a_formateo.Text)
                             fin_atencion1 = N + tiempo_atencion1
                             fin_15c1 = N + 15
                             fin_15c2 = fin_atencion1 - 15
 
                         Case "D"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_agregar.Text - a_agregar.Text)) + a_agregar.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "E"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_cambio.Text - a_cambio.Text)) + a_cambio.Text)
                             fin_atencion1 = N + tiempo_atencion1
                     End Select
@@ -536,26 +536,26 @@
                     'CLACULAR TIEMPO ARREGLO
                     Select Case tipo
                         Case "A"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_placa.Text - a_placa.Text)) + a_placa.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "B"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_ampliacion.Text - a_ampliacion.Text)) + a_ampliacion.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "C"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_formateo.Text - a_formateo.Text)) + a_formateo.Text)
                             fin_atencion1 = N + tiempo_atencion1
                             fin_15c1 = N + 15
                             fin_15c2 = fin_atencion1 - 15
 
                         Case "D"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_agregar.Text - a_agregar.Text)) + a_agregar.Text)
                             fin_atencion1 = N + tiempo_atencion1
                         Case "E"
-                            rnd_atencion1 = RND.NextDouble
+                            rnd_atencion1 = Math.Round(RND.NextDouble,4)
                             tiempo_atencion1 = ((rnd_atencion1 * (b_cambio.Text - a_cambio.Text)) + a_cambio.Text)
                             fin_atencion1 = N + tiempo_atencion1
                     End Select
@@ -650,6 +650,7 @@
     End Sub
 
     Private Sub btn_iniciar_Click(sender As Object, e As EventArgs) Handles btn_iniciar.Click
+        DataGridView1.Rows.Clear()
         If RadioButton1.Checked = True Then
             simular(tiempo.Text)
         ElseIf RadioButton2.Checked = True Then
@@ -682,6 +683,7 @@
         prom_permanencia.Clear()
         cant_no_atendidos.Clear()
         ocupacion_tecnicos.Clear()
+        DataGridView1.Rows.Clear()
     End Sub
 
 
