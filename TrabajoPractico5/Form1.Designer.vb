@@ -123,7 +123,7 @@ Partial Class Form1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.reloj, Me.evento, Me.rnd_llegada, Me.tel_llegada, Me.prox_llegada, Me.rnd_tipo, Me.tipo_reparacion, Me.rnd_tecnico1, Me.tiempo_at1, Me.fin_at1, Me.estado1, Me.FinPrimeros15minTecnico1, Me.FinEsperaTipoCTecnico1, Me.rnd_tecnico2, Me.tiempo_at2, Me.fin_at2, Me.estado2, Me.fin_1c, Me.fin_2c, Me.cola, Me.ac_tiempo_ocupacion, Me.cont_comp, Me.cont_no_atendidas, Me.permanencia, Me.nro_iteracion, Me.EstadoComputadora, Me.EstadoComputadora2, Me.EstadoComputadora3})
         Me.DataGridView1.Location = New System.Drawing.Point(16, 417)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = true
         Me.DataGridView1.Size = New System.Drawing.Size(1709, 267)
@@ -302,7 +302,7 @@ Partial Class Form1
         '
         Me.tiempo.Enabled = false
         Me.tiempo.Location = New System.Drawing.Point(124, 23)
-        Me.tiempo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tiempo.Margin = New System.Windows.Forms.Padding(4)
         Me.tiempo.Name = "tiempo"
         Me.tiempo.Size = New System.Drawing.Size(203, 22)
         Me.tiempo.TabIndex = 2
@@ -335,9 +335,9 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.btn_iniciar)
         Me.GroupBox4.Controls.Add(Me.txt_desde)
         Me.GroupBox4.Location = New System.Drawing.Point(16, 228)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Size = New System.Drawing.Size(381, 148)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = false
@@ -346,7 +346,7 @@ Partial Class Form1
         'cant_iteraciones
         '
         Me.cant_iteraciones.Location = New System.Drawing.Point(181, 66)
-        Me.cant_iteraciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cant_iteraciones.Margin = New System.Windows.Forms.Padding(4)
         Me.cant_iteraciones.Name = "cant_iteraciones"
         Me.cant_iteraciones.Size = New System.Drawing.Size(113, 22)
         Me.cant_iteraciones.TabIndex = 4
@@ -354,7 +354,7 @@ Partial Class Form1
         'btn_iniciar
         '
         Me.btn_iniciar.Location = New System.Drawing.Point(257, 98)
-        Me.btn_iniciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_iniciar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_iniciar.Name = "btn_iniciar"
         Me.btn_iniciar.Size = New System.Drawing.Size(100, 28)
         Me.btn_iniciar.TabIndex = 5
@@ -364,7 +364,7 @@ Partial Class Form1
         'txt_desde
         '
         Me.txt_desde.Location = New System.Drawing.Point(181, 34)
-        Me.txt_desde.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_desde.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_desde.Name = "txt_desde"
         Me.txt_desde.Size = New System.Drawing.Size(113, 22)
         Me.txt_desde.TabIndex = 2
@@ -378,9 +378,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.GroupBox8)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Location = New System.Drawing.Point(405, 20)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(787, 377)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = false
@@ -393,9 +393,9 @@ Partial Class Form1
         Me.GroupBox7.Controls.Add(Me.Label12)
         Me.GroupBox7.Controls.Add(Me.Label13)
         Me.GroupBox7.Location = New System.Drawing.Point(539, 39)
-        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox7.Size = New System.Drawing.Size(216, 137)
         Me.GroupBox7.TabIndex = 12
         Me.GroupBox7.TabStop = false
@@ -404,7 +404,7 @@ Partial Class Form1
         'b_formateo
         '
         Me.b_formateo.Location = New System.Drawing.Point(55, 70)
-        Me.b_formateo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.b_formateo.Margin = New System.Windows.Forms.Padding(4)
         Me.b_formateo.Name = "b_formateo"
         Me.b_formateo.Size = New System.Drawing.Size(76, 22)
         Me.b_formateo.TabIndex = 9
@@ -413,7 +413,7 @@ Partial Class Form1
         'a_formateo
         '
         Me.a_formateo.Location = New System.Drawing.Point(55, 34)
-        Me.a_formateo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.a_formateo.Margin = New System.Windows.Forms.Padding(4)
         Me.a_formateo.Name = "a_formateo"
         Me.a_formateo.Size = New System.Drawing.Size(76, 22)
         Me.a_formateo.TabIndex = 11
@@ -446,9 +446,9 @@ Partial Class Form1
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Controls.Add(Me.Label9)
         Me.GroupBox5.Location = New System.Drawing.Point(539, 208)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Size = New System.Drawing.Size(216, 137)
         Me.GroupBox5.TabIndex = 12
         Me.GroupBox5.TabStop = false
@@ -457,7 +457,7 @@ Partial Class Form1
         'b_agregar
         '
         Me.b_agregar.Location = New System.Drawing.Point(55, 70)
-        Me.b_agregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.b_agregar.Margin = New System.Windows.Forms.Padding(4)
         Me.b_agregar.Name = "b_agregar"
         Me.b_agregar.Size = New System.Drawing.Size(76, 22)
         Me.b_agregar.TabIndex = 9
@@ -466,7 +466,7 @@ Partial Class Form1
         'a_agregar
         '
         Me.a_agregar.Location = New System.Drawing.Point(55, 34)
-        Me.a_agregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.a_agregar.Margin = New System.Windows.Forms.Padding(4)
         Me.a_agregar.Name = "a_agregar"
         Me.a_agregar.Size = New System.Drawing.Size(76, 22)
         Me.a_agregar.TabIndex = 11
@@ -499,9 +499,9 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Location = New System.Drawing.Point(285, 208)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(216, 137)
         Me.GroupBox3.TabIndex = 13
         Me.GroupBox3.TabStop = false
@@ -510,7 +510,7 @@ Partial Class Form1
         'b_cambio
         '
         Me.b_cambio.Location = New System.Drawing.Point(55, 70)
-        Me.b_cambio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.b_cambio.Margin = New System.Windows.Forms.Padding(4)
         Me.b_cambio.Name = "b_cambio"
         Me.b_cambio.Size = New System.Drawing.Size(76, 22)
         Me.b_cambio.TabIndex = 9
@@ -519,7 +519,7 @@ Partial Class Form1
         'a_cambio
         '
         Me.a_cambio.Location = New System.Drawing.Point(55, 34)
-        Me.a_cambio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.a_cambio.Margin = New System.Windows.Forms.Padding(4)
         Me.a_cambio.Name = "a_cambio"
         Me.a_cambio.Size = New System.Drawing.Size(76, 22)
         Me.a_cambio.TabIndex = 11
@@ -552,9 +552,9 @@ Partial Class Form1
         Me.GroupBox6.Controls.Add(Me.Label10)
         Me.GroupBox6.Controls.Add(Me.Label11)
         Me.GroupBox6.Location = New System.Drawing.Point(31, 208)
-        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Size = New System.Drawing.Size(216, 137)
         Me.GroupBox6.TabIndex = 12
         Me.GroupBox6.TabStop = false
@@ -563,7 +563,7 @@ Partial Class Form1
         'b_ampliacion
         '
         Me.b_ampliacion.Location = New System.Drawing.Point(55, 70)
-        Me.b_ampliacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.b_ampliacion.Margin = New System.Windows.Forms.Padding(4)
         Me.b_ampliacion.Name = "b_ampliacion"
         Me.b_ampliacion.Size = New System.Drawing.Size(76, 22)
         Me.b_ampliacion.TabIndex = 9
@@ -572,7 +572,7 @@ Partial Class Form1
         'a_ampliacion
         '
         Me.a_ampliacion.Location = New System.Drawing.Point(55, 34)
-        Me.a_ampliacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.a_ampliacion.Margin = New System.Windows.Forms.Padding(4)
         Me.a_ampliacion.Name = "a_ampliacion"
         Me.a_ampliacion.Size = New System.Drawing.Size(76, 22)
         Me.a_ampliacion.TabIndex = 11
@@ -605,9 +605,9 @@ Partial Class Form1
         Me.GroupBox8.Controls.Add(Me.Label14)
         Me.GroupBox8.Controls.Add(Me.Label15)
         Me.GroupBox8.Location = New System.Drawing.Point(285, 39)
-        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox8.Size = New System.Drawing.Size(216, 137)
         Me.GroupBox8.TabIndex = 12
         Me.GroupBox8.TabStop = false
@@ -616,7 +616,7 @@ Partial Class Form1
         'b_placa
         '
         Me.b_placa.Location = New System.Drawing.Point(55, 70)
-        Me.b_placa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.b_placa.Margin = New System.Windows.Forms.Padding(4)
         Me.b_placa.Name = "b_placa"
         Me.b_placa.Size = New System.Drawing.Size(76, 22)
         Me.b_placa.TabIndex = 9
@@ -625,7 +625,7 @@ Partial Class Form1
         'a_placa
         '
         Me.a_placa.Location = New System.Drawing.Point(55, 34)
-        Me.a_placa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.a_placa.Margin = New System.Windows.Forms.Padding(4)
         Me.a_placa.Name = "a_placa"
         Me.a_placa.Size = New System.Drawing.Size(76, 22)
         Me.a_placa.TabIndex = 11
@@ -658,9 +658,9 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Location = New System.Drawing.Point(31, 39)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(216, 137)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = false
@@ -669,7 +669,7 @@ Partial Class Form1
         'b_llegada
         '
         Me.b_llegada.Location = New System.Drawing.Point(55, 70)
-        Me.b_llegada.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.b_llegada.Margin = New System.Windows.Forms.Padding(4)
         Me.b_llegada.Name = "b_llegada"
         Me.b_llegada.Size = New System.Drawing.Size(76, 22)
         Me.b_llegada.TabIndex = 9
@@ -678,7 +678,7 @@ Partial Class Form1
         'a_llegada
         '
         Me.a_llegada.Location = New System.Drawing.Point(55, 34)
-        Me.a_llegada.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.a_llegada.Margin = New System.Windows.Forms.Padding(4)
         Me.a_llegada.Name = "a_llegada"
         Me.a_llegada.Size = New System.Drawing.Size(76, 22)
         Me.a_llegada.TabIndex = 11
@@ -707,7 +707,7 @@ Partial Class Form1
         'Borrar
         '
         Me.Borrar.Location = New System.Drawing.Point(1625, 704)
-        Me.Borrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Borrar.Margin = New System.Windows.Forms.Padding(4)
         Me.Borrar.Name = "Borrar"
         Me.Borrar.Size = New System.Drawing.Size(100, 28)
         Me.Borrar.TabIndex = 8
@@ -723,9 +723,9 @@ Partial Class Form1
         Me.GroupBox9.Controls.Add(Me.prom_permanencia)
         Me.GroupBox9.Controls.Add(Me.Label18)
         Me.GroupBox9.Location = New System.Drawing.Point(1213, 129)
-        Me.GroupBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox9.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox9.Size = New System.Drawing.Size(512, 182)
         Me.GroupBox9.TabIndex = 9
         Me.GroupBox9.TabStop = false
@@ -744,7 +744,7 @@ Partial Class Form1
         'cant_no_atendidos
         '
         Me.cant_no_atendidos.Location = New System.Drawing.Point(381, 74)
-        Me.cant_no_atendidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cant_no_atendidos.Margin = New System.Windows.Forms.Padding(4)
         Me.cant_no_atendidos.Name = "cant_no_atendidos"
         Me.cant_no_atendidos.ReadOnly = true
         Me.cant_no_atendidos.Size = New System.Drawing.Size(109, 22)
@@ -763,7 +763,7 @@ Partial Class Form1
         'ocupacion_tecnicos
         '
         Me.ocupacion_tecnicos.Location = New System.Drawing.Point(381, 113)
-        Me.ocupacion_tecnicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ocupacion_tecnicos.Margin = New System.Windows.Forms.Padding(4)
         Me.ocupacion_tecnicos.Name = "ocupacion_tecnicos"
         Me.ocupacion_tecnicos.ReadOnly = true
         Me.ocupacion_tecnicos.Size = New System.Drawing.Size(109, 22)
@@ -772,7 +772,7 @@ Partial Class Form1
         'prom_permanencia
         '
         Me.prom_permanencia.Location = New System.Drawing.Point(381, 36)
-        Me.prom_permanencia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.prom_permanencia.Margin = New System.Windows.Forms.Padding(4)
         Me.prom_permanencia.Name = "prom_permanencia"
         Me.prom_permanencia.ReadOnly = true
         Me.prom_permanencia.Size = New System.Drawing.Size(109, 22)
@@ -791,7 +791,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(1200, 368)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 6
@@ -805,9 +805,9 @@ Partial Class Form1
         Me.GroupBox10.Controls.Add(Me.Iteraciones)
         Me.GroupBox10.Controls.Add(Me.tiempo)
         Me.GroupBox10.Location = New System.Drawing.Point(16, 31)
-        Me.GroupBox10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox10.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox10.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox10.Size = New System.Drawing.Size(336, 123)
         Me.GroupBox10.TabIndex = 11
         Me.GroupBox10.TabStop = false
@@ -817,7 +817,7 @@ Partial Class Form1
         '
         Me.RadioButton2.AutoSize = true
         Me.RadioButton2.Location = New System.Drawing.Point(8, 66)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(98, 21)
         Me.RadioButton2.TabIndex = 13
@@ -829,7 +829,7 @@ Partial Class Form1
         Me.RadioButton1.AutoSize = true
         Me.RadioButton1.Checked = true
         Me.RadioButton1.Location = New System.Drawing.Point(8, 25)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(76, 21)
         Me.RadioButton1.TabIndex = 12
@@ -841,7 +841,7 @@ Partial Class Form1
         '
         Me.Iteraciones.Enabled = false
         Me.Iteraciones.Location = New System.Drawing.Point(124, 66)
-        Me.Iteraciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Iteraciones.Margin = New System.Windows.Forms.Padding(4)
         Me.Iteraciones.Name = "Iteraciones"
         Me.Iteraciones.Size = New System.Drawing.Size(203, 22)
         Me.Iteraciones.TabIndex = 12
@@ -858,7 +858,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "TP5"
         CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
