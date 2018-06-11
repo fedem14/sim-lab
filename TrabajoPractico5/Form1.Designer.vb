@@ -122,7 +122,7 @@ Partial Class Form1
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.reloj, Me.evento, Me.rnd_llegada, Me.tel_llegada, Me.prox_llegada, Me.rnd_tipo, Me.tipo_reparacion, Me.rnd_tecnico1, Me.tiempo_at1, Me.fin_at1, Me.estado1, Me.FinPrimeros15minTecnico1, Me.FinEsperaTipoCTecnico1, Me.rnd_tecnico2, Me.tiempo_at2, Me.fin_at2, Me.estado2, Me.fin_1c, Me.fin_2c, Me.cola, Me.ac_tiempo_ocupacion, Me.cont_comp, Me.cont_no_atendidas, Me.permanencia, Me.nro_iteracion, Me.EstadoComputadora, Me.EstadoComputadora2, Me.EstadoComputadora3})
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 417)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 404)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = true
@@ -233,13 +233,13 @@ Partial Class Form1
         '
         'fin_1c
         '
-        Me.fin_1c.HeaderText = "Fin primeros 15 min Tipo C Tecnico 1"
+        Me.fin_1c.HeaderText = "Fin primeros 15 min Tipo C Tecnico 2"
         Me.fin_1c.Name = "fin_1c"
         Me.fin_1c.ReadOnly = true
         '
         'fin_2c
         '
-        Me.fin_2c.HeaderText = "Fin Espera Tipo C Tecnico 1"
+        Me.fin_2c.HeaderText = "Fin Espera Tipo C Tecnico 2"
         Me.fin_2c.Name = "fin_2c"
         Me.fin_2c.ReadOnly = true
         '
@@ -257,7 +257,7 @@ Partial Class Form1
         '
         'cont_comp
         '
-        Me.cont_comp.HeaderText = "Contador Computadoras"
+        Me.cont_comp.HeaderText = "Contador Computadoras Atendidas"
         Me.cont_comp.Name = "cont_comp"
         Me.cont_comp.ReadOnly = true
         '
@@ -816,30 +816,29 @@ Partial Class Form1
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = true
+        Me.RadioButton2.Checked = true
         Me.RadioButton2.Location = New System.Drawing.Point(8, 66)
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(98, 21)
         Me.RadioButton2.TabIndex = 13
+        Me.RadioButton2.TabStop = true
         Me.RadioButton2.Text = "Iteraciones"
         Me.RadioButton2.UseVisualStyleBackColor = true
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = true
-        Me.RadioButton1.Checked = true
         Me.RadioButton1.Location = New System.Drawing.Point(8, 25)
         Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(76, 21)
         Me.RadioButton1.TabIndex = 12
-        Me.RadioButton1.TabStop = true
         Me.RadioButton1.Text = "Tiempo"
         Me.RadioButton1.UseVisualStyleBackColor = true
         '
         'Iteraciones
         '
-        Me.Iteraciones.Enabled = false
         Me.Iteraciones.Location = New System.Drawing.Point(124, 66)
         Me.Iteraciones.Margin = New System.Windows.Forms.Padding(4)
         Me.Iteraciones.Name = "Iteraciones"
@@ -936,33 +935,32 @@ End Sub
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Iteraciones As System.Windows.Forms.TextBox
-    Friend WithEvents reloj As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents evento As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rnd_llegada As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tel_llegada As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents prox_llegada As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rnd_tipo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tipo_reparacion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rnd_tecnico1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tiempo_at1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents fin_at1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents estado1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FinPrimeros15minTecnico1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FinEsperaTipoCTecnico1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rnd_tecnico2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tiempo_at2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents fin_at2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents estado2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents fin_1c As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents fin_2c As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cola As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ac_tiempo_ocupacion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cont_comp As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cont_no_atendidas As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents permanencia As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents nro_iteracion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EstadoComputadora As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EstadoComputadora2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EstadoComputadora3 As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents reloj As DataGridViewTextBoxColumn
+    Friend WithEvents evento As DataGridViewTextBoxColumn
+    Friend WithEvents rnd_llegada As DataGridViewTextBoxColumn
+    Friend WithEvents tel_llegada As DataGridViewTextBoxColumn
+    Friend WithEvents prox_llegada As DataGridViewTextBoxColumn
+    Friend WithEvents rnd_tipo As DataGridViewTextBoxColumn
+    Friend WithEvents tipo_reparacion As DataGridViewTextBoxColumn
+    Friend WithEvents rnd_tecnico1 As DataGridViewTextBoxColumn
+    Friend WithEvents tiempo_at1 As DataGridViewTextBoxColumn
+    Friend WithEvents fin_at1 As DataGridViewTextBoxColumn
+    Friend WithEvents estado1 As DataGridViewTextBoxColumn
+    Friend WithEvents FinPrimeros15minTecnico1 As DataGridViewTextBoxColumn
+    Friend WithEvents FinEsperaTipoCTecnico1 As DataGridViewTextBoxColumn
+    Friend WithEvents rnd_tecnico2 As DataGridViewTextBoxColumn
+    Friend WithEvents tiempo_at2 As DataGridViewTextBoxColumn
+    Friend WithEvents fin_at2 As DataGridViewTextBoxColumn
+    Friend WithEvents estado2 As DataGridViewTextBoxColumn
+    Friend WithEvents fin_1c As DataGridViewTextBoxColumn
+    Friend WithEvents fin_2c As DataGridViewTextBoxColumn
+    Friend WithEvents cola As DataGridViewTextBoxColumn
+    Friend WithEvents ac_tiempo_ocupacion As DataGridViewTextBoxColumn
+    Friend WithEvents cont_comp As DataGridViewTextBoxColumn
+    Friend WithEvents cont_no_atendidas As DataGridViewTextBoxColumn
+    Friend WithEvents permanencia As DataGridViewTextBoxColumn
+    Friend WithEvents nro_iteracion As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora2 As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora3 As DataGridViewTextBoxColumn
 End Class
