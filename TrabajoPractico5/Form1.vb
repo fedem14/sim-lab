@@ -4,7 +4,7 @@
     Private Sub simular(N)
 
         Dim i As Integer
-        Dim RND As New Random
+        Dim RND As New RandomTest
         Dim rnd_llegada As Double
         Dim tiempo_entre_llegadas As Double
         Dim proxima_llegada As Decimal
