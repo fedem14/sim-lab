@@ -22,6 +22,20 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.reloj = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.evento = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,9 +63,15 @@ Partial Class Form1
         Me.permanencia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nro_iteracion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoComputadora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.finAtencionC1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoComputadora2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.finAtencionC2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoComputadora3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tiempo = New System.Windows.Forms.TextBox()
+        Me.finAtencionC3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoComputadora4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.finAtencionC4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoComputadora5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.finAtencionC5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -97,11 +117,45 @@ Partial Class Form1
         Me.ocupacion_tecnicos = New System.Windows.Forms.TextBox()
         Me.prom_permanencia = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Iteraciones = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.GroupBox4.SuspendLayout
         Me.GroupBox1.SuspendLayout
@@ -113,6 +167,7 @@ Partial Class Form1
         Me.GroupBox2.SuspendLayout
         Me.GroupBox9.SuspendLayout
         Me.GroupBox10.SuspendLayout
+        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
         'DataGridView1
@@ -121,13 +176,14 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToDeleteRows = false
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.reloj, Me.evento, Me.rnd_llegada, Me.tel_llegada, Me.prox_llegada, Me.rnd_tipo, Me.tipo_reparacion, Me.rnd_tecnico1, Me.tiempo_at1, Me.fin_at1, Me.estado1, Me.FinPrimeros15minTecnico1, Me.FinEsperaTipoCTecnico1, Me.rnd_tecnico2, Me.tiempo_at2, Me.fin_at2, Me.estado2, Me.fin_1c, Me.fin_2c, Me.cola, Me.ac_tiempo_ocupacion, Me.cont_comp, Me.cont_no_atendidas, Me.permanencia, Me.nro_iteracion, Me.EstadoComputadora, Me.EstadoComputadora2, Me.EstadoComputadora3})
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 404)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.reloj, Me.evento, Me.rnd_llegada, Me.tel_llegada, Me.prox_llegada, Me.rnd_tipo, Me.tipo_reparacion, Me.rnd_tecnico1, Me.tiempo_at1, Me.fin_at1, Me.estado1, Me.FinPrimeros15minTecnico1, Me.FinEsperaTipoCTecnico1, Me.rnd_tecnico2, Me.tiempo_at2, Me.fin_at2, Me.estado2, Me.fin_1c, Me.fin_2c, Me.cola, Me.ac_tiempo_ocupacion, Me.cont_comp, Me.cont_no_atendidas, Me.permanencia, Me.nro_iteracion, Me.EstadoComputadora, Me.finAtencionC1, Me.EstadoComputadora2, Me.finAtencionC2, Me.EstadoComputadora3, Me.finAtencionC3, Me.EstadoComputadora4, Me.finAtencionC4, Me.EstadoComputadora5, Me.finAtencionC5})
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 505)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = true
-        Me.DataGridView1.Size = New System.Drawing.Size(1709, 267)
+        Me.DataGridView1.Size = New System.Drawing.Size(2022, 585)
         Me.DataGridView1.TabIndex = 0
+        Me.DataGridView1.Visible = false
         '
         'reloj
         '
@@ -155,6 +211,8 @@ Partial Class Form1
         '
         'prox_llegada
         '
+        DataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.prox_llegada.DefaultCellStyle = DataGridViewCellStyle43
         Me.prox_llegada.HeaderText = "Proxima Llegada"
         Me.prox_llegada.Name = "prox_llegada"
         Me.prox_llegada.ReadOnly = true
@@ -185,6 +243,8 @@ Partial Class Form1
         '
         'fin_at1
         '
+        DataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.fin_at1.DefaultCellStyle = DataGridViewCellStyle44
         Me.fin_at1.HeaderText = "Fin Atencion Tecnico1"
         Me.fin_at1.Name = "fin_at1"
         Me.fin_at1.ReadOnly = true
@@ -197,12 +257,16 @@ Partial Class Form1
         '
         'FinPrimeros15minTecnico1
         '
+        DataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.FinPrimeros15minTecnico1.DefaultCellStyle = DataGridViewCellStyle45
         Me.FinPrimeros15minTecnico1.HeaderText = "Fin Primeros 15 min Tipo C Tecnico 1"
         Me.FinPrimeros15minTecnico1.Name = "FinPrimeros15minTecnico1"
         Me.FinPrimeros15minTecnico1.ReadOnly = true
         '
         'FinEsperaTipoCTecnico1
         '
+        DataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.FinEsperaTipoCTecnico1.DefaultCellStyle = DataGridViewCellStyle46
         Me.FinEsperaTipoCTecnico1.HeaderText = "Fin Espera Tipo C Tecnico 1"
         Me.FinEsperaTipoCTecnico1.Name = "FinEsperaTipoCTecnico1"
         Me.FinEsperaTipoCTecnico1.ReadOnly = true
@@ -221,6 +285,8 @@ Partial Class Form1
         '
         'fin_at2
         '
+        DataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.fin_at2.DefaultCellStyle = DataGridViewCellStyle47
         Me.fin_at2.HeaderText = "Fin Atencion Tecnico2"
         Me.fin_at2.Name = "fin_at2"
         Me.fin_at2.ReadOnly = true
@@ -233,12 +299,16 @@ Partial Class Form1
         '
         'fin_1c
         '
+        DataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.fin_1c.DefaultCellStyle = DataGridViewCellStyle48
         Me.fin_1c.HeaderText = "Fin primeros 15 min Tipo C Tecnico 2"
         Me.fin_1c.Name = "fin_1c"
         Me.fin_1c.ReadOnly = true
         '
         'fin_2c
         '
+        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.fin_2c.DefaultCellStyle = DataGridViewCellStyle49
         Me.fin_2c.HeaderText = "Fin Espera Tipo C Tecnico 2"
         Me.fin_2c.Name = "fin_2c"
         Me.fin_2c.ReadOnly = true
@@ -286,11 +356,23 @@ Partial Class Form1
         Me.EstadoComputadora.Name = "EstadoComputadora"
         Me.EstadoComputadora.ReadOnly = true
         '
+        'finAtencionC1
+        '
+        Me.finAtencionC1.HeaderText = "finAtencionC1"
+        Me.finAtencionC1.Name = "finAtencionC1"
+        Me.finAtencionC1.ReadOnly = true
+        '
         'EstadoComputadora2
         '
         Me.EstadoComputadora2.HeaderText = "EstadoComputadora2"
         Me.EstadoComputadora2.Name = "EstadoComputadora2"
         Me.EstadoComputadora2.ReadOnly = true
+        '
+        'finAtencionC2
+        '
+        Me.finAtencionC2.HeaderText = "finAtencionC2"
+        Me.finAtencionC2.Name = "finAtencionC2"
+        Me.finAtencionC2.ReadOnly = true
         '
         'EstadoComputadora3
         '
@@ -298,32 +380,53 @@ Partial Class Form1
         Me.EstadoComputadora3.Name = "EstadoComputadora3"
         Me.EstadoComputadora3.ReadOnly = true
         '
-        'tiempo
+        'finAtencionC3
         '
-        Me.tiempo.Enabled = false
-        Me.tiempo.Location = New System.Drawing.Point(124, 23)
-        Me.tiempo.Margin = New System.Windows.Forms.Padding(4)
-        Me.tiempo.Name = "tiempo"
-        Me.tiempo.Size = New System.Drawing.Size(203, 22)
-        Me.tiempo.TabIndex = 2
+        Me.finAtencionC3.HeaderText = "finAtencionC3"
+        Me.finAtencionC3.Name = "finAtencionC3"
+        Me.finAtencionC3.ReadOnly = true
+        '
+        'EstadoComputadora4
+        '
+        Me.EstadoComputadora4.HeaderText = "EstadoComputadora4"
+        Me.EstadoComputadora4.Name = "EstadoComputadora4"
+        Me.EstadoComputadora4.ReadOnly = true
+        '
+        'finAtencionC4
+        '
+        Me.finAtencionC4.HeaderText = "finAtencionC4"
+        Me.finAtencionC4.Name = "finAtencionC4"
+        Me.finAtencionC4.ReadOnly = true
+        '
+        'EstadoComputadora5
+        '
+        Me.EstadoComputadora5.HeaderText = "EstadoComputadora5"
+        Me.EstadoComputadora5.Name = "EstadoComputadora5"
+        Me.EstadoComputadora5.ReadOnly = true
+        '
+        'finAtencionC5
+        '
+        Me.finAtencionC5.HeaderText = "finAtencionC5"
+        Me.finAtencionC5.Name = "finAtencionC5"
+        Me.finAtencionC5.ReadOnly = true
         '
         'Label2
         '
         Me.Label2.AutoSize = true
-        Me.Label2.Location = New System.Drawing.Point(127, 38)
+        Me.Label2.Location = New System.Drawing.Point(142, 48)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 17)
+        Me.Label2.Size = New System.Drawing.Size(50, 20)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Inicio:"
         '
         'Label3
         '
         Me.Label3.AutoSize = true
-        Me.Label3.Location = New System.Drawing.Point(12, 70)
+        Me.Label3.Location = New System.Drawing.Point(14, 88)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(161, 17)
+        Me.Label3.Size = New System.Drawing.Size(180, 20)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Cantidad de iteraciones:"
         '
@@ -334,39 +437,39 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Controls.Add(Me.btn_iniciar)
         Me.GroupBox4.Controls.Add(Me.txt_desde)
-        Me.GroupBox4.Location = New System.Drawing.Point(16, 228)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox4.Location = New System.Drawing.Point(18, 285)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox4.Size = New System.Drawing.Size(381, 148)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox4.Size = New System.Drawing.Size(429, 185)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = false
         Me.GroupBox4.Text = "Mostrar en Tabla"
         '
         'cant_iteraciones
         '
-        Me.cant_iteraciones.Location = New System.Drawing.Point(181, 66)
-        Me.cant_iteraciones.Margin = New System.Windows.Forms.Padding(4)
+        Me.cant_iteraciones.Location = New System.Drawing.Point(204, 83)
+        Me.cant_iteraciones.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cant_iteraciones.Name = "cant_iteraciones"
-        Me.cant_iteraciones.Size = New System.Drawing.Size(113, 22)
+        Me.cant_iteraciones.Size = New System.Drawing.Size(127, 26)
         Me.cant_iteraciones.TabIndex = 4
         '
         'btn_iniciar
         '
-        Me.btn_iniciar.Location = New System.Drawing.Point(257, 98)
-        Me.btn_iniciar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_iniciar.Location = New System.Drawing.Point(290, 123)
+        Me.btn_iniciar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_iniciar.Name = "btn_iniciar"
-        Me.btn_iniciar.Size = New System.Drawing.Size(100, 28)
+        Me.btn_iniciar.Size = New System.Drawing.Size(112, 35)
         Me.btn_iniciar.TabIndex = 5
         Me.btn_iniciar.Text = "Iniciar"
         Me.btn_iniciar.UseVisualStyleBackColor = true
         '
         'txt_desde
         '
-        Me.txt_desde.Location = New System.Drawing.Point(181, 34)
-        Me.txt_desde.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_desde.Location = New System.Drawing.Point(204, 43)
+        Me.txt_desde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_desde.Name = "txt_desde"
-        Me.txt_desde.Size = New System.Drawing.Size(113, 22)
+        Me.txt_desde.Size = New System.Drawing.Size(127, 26)
         Me.txt_desde.TabIndex = 2
         '
         'GroupBox1
@@ -377,11 +480,11 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.GroupBox6)
         Me.GroupBox1.Controls.Add(Me.GroupBox8)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(405, 20)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(456, 25)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(787, 377)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox1.Size = New System.Drawing.Size(885, 471)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = false
         Me.GroupBox1.Text = "Distribuciones"
@@ -392,50 +495,50 @@ Partial Class Form1
         Me.GroupBox7.Controls.Add(Me.a_formateo)
         Me.GroupBox7.Controls.Add(Me.Label12)
         Me.GroupBox7.Controls.Add(Me.Label13)
-        Me.GroupBox7.Location = New System.Drawing.Point(539, 39)
-        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox7.Location = New System.Drawing.Point(606, 49)
+        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox7.Size = New System.Drawing.Size(216, 137)
+        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox7.Size = New System.Drawing.Size(243, 171)
         Me.GroupBox7.TabIndex = 12
         Me.GroupBox7.TabStop = false
         Me.GroupBox7.Text = "Formateo de disco"
         '
         'b_formateo
         '
-        Me.b_formateo.Location = New System.Drawing.Point(55, 70)
-        Me.b_formateo.Margin = New System.Windows.Forms.Padding(4)
+        Me.b_formateo.Location = New System.Drawing.Point(62, 88)
+        Me.b_formateo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.b_formateo.Name = "b_formateo"
-        Me.b_formateo.Size = New System.Drawing.Size(76, 22)
+        Me.b_formateo.Size = New System.Drawing.Size(85, 26)
         Me.b_formateo.TabIndex = 9
-        Me.b_formateo.Text = "54"
+        Me.b_formateo.Text = "185"
         '
         'a_formateo
         '
-        Me.a_formateo.Location = New System.Drawing.Point(55, 34)
-        Me.a_formateo.Margin = New System.Windows.Forms.Padding(4)
+        Me.a_formateo.Location = New System.Drawing.Point(62, 43)
+        Me.a_formateo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.a_formateo.Name = "a_formateo"
-        Me.a_formateo.Size = New System.Drawing.Size(76, 22)
+        Me.a_formateo.Size = New System.Drawing.Size(85, 26)
         Me.a_formateo.TabIndex = 11
-        Me.a_formateo.Text = "30"
+        Me.a_formateo.Text = "175"
         '
         'Label12
         '
         Me.Label12.AutoSize = true
-        Me.Label12.Location = New System.Drawing.Point(24, 74)
+        Me.Label12.Location = New System.Drawing.Point(27, 92)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(21, 17)
+        Me.Label12.Size = New System.Drawing.Size(24, 20)
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "B:"
         '
         'Label13
         '
         Me.Label13.AutoSize = true
-        Me.Label13.Location = New System.Drawing.Point(24, 38)
+        Me.Label13.Location = New System.Drawing.Point(27, 48)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(21, 17)
+        Me.Label13.Size = New System.Drawing.Size(24, 20)
         Me.Label13.TabIndex = 10
         Me.Label13.Text = "A:"
         '
@@ -445,50 +548,50 @@ Partial Class Form1
         Me.GroupBox5.Controls.Add(Me.a_agregar)
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Controls.Add(Me.Label9)
-        Me.GroupBox5.Location = New System.Drawing.Point(539, 208)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox5.Location = New System.Drawing.Point(606, 260)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox5.Size = New System.Drawing.Size(216, 137)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox5.Size = New System.Drawing.Size(243, 171)
         Me.GroupBox5.TabIndex = 12
         Me.GroupBox5.TabStop = false
         Me.GroupBox5.Text = "Agregar CD o DVD"
         '
         'b_agregar
         '
-        Me.b_agregar.Location = New System.Drawing.Point(55, 70)
-        Me.b_agregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.b_agregar.Location = New System.Drawing.Point(62, 88)
+        Me.b_agregar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.b_agregar.Name = "b_agregar"
-        Me.b_agregar.Size = New System.Drawing.Size(76, 22)
+        Me.b_agregar.Size = New System.Drawing.Size(85, 26)
         Me.b_agregar.TabIndex = 9
-        Me.b_agregar.Text = "99"
+        Me.b_agregar.Text = "65"
         '
         'a_agregar
         '
-        Me.a_agregar.Location = New System.Drawing.Point(55, 34)
-        Me.a_agregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.a_agregar.Location = New System.Drawing.Point(62, 43)
+        Me.a_agregar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.a_agregar.Name = "a_agregar"
-        Me.a_agregar.Size = New System.Drawing.Size(76, 22)
+        Me.a_agregar.Size = New System.Drawing.Size(85, 26)
         Me.a_agregar.TabIndex = 11
-        Me.a_agregar.Text = "80"
+        Me.a_agregar.Text = "55"
         '
         'Label8
         '
         Me.Label8.AutoSize = true
-        Me.Label8.Location = New System.Drawing.Point(24, 74)
+        Me.Label8.Location = New System.Drawing.Point(27, 92)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(21, 17)
+        Me.Label8.Size = New System.Drawing.Size(24, 20)
         Me.Label8.TabIndex = 8
         Me.Label8.Text = "B:"
         '
         'Label9
         '
         Me.Label9.AutoSize = true
-        Me.Label9.Location = New System.Drawing.Point(24, 38)
+        Me.Label9.Location = New System.Drawing.Point(27, 48)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(21, 17)
+        Me.Label9.Size = New System.Drawing.Size(24, 20)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "A:"
         '
@@ -498,50 +601,50 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.a_cambio)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Location = New System.Drawing.Point(285, 208)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Location = New System.Drawing.Point(321, 260)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Size = New System.Drawing.Size(216, 137)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox3.Size = New System.Drawing.Size(243, 171)
         Me.GroupBox3.TabIndex = 13
         Me.GroupBox3.TabStop = false
         Me.GroupBox3.Text = "Cambio de memoria"
         '
         'b_cambio
         '
-        Me.b_cambio.Location = New System.Drawing.Point(55, 70)
-        Me.b_cambio.Margin = New System.Windows.Forms.Padding(4)
+        Me.b_cambio.Location = New System.Drawing.Point(62, 88)
+        Me.b_cambio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.b_cambio.Name = "b_cambio"
-        Me.b_cambio.Size = New System.Drawing.Size(76, 22)
+        Me.b_cambio.Size = New System.Drawing.Size(85, 26)
         Me.b_cambio.TabIndex = 9
-        Me.b_cambio.Text = "79"
+        Me.b_cambio.Text = "95"
         '
         'a_cambio
         '
-        Me.a_cambio.Location = New System.Drawing.Point(55, 34)
-        Me.a_cambio.Margin = New System.Windows.Forms.Padding(4)
+        Me.a_cambio.Location = New System.Drawing.Point(62, 43)
+        Me.a_cambio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.a_cambio.Name = "a_cambio"
-        Me.a_cambio.Size = New System.Drawing.Size(76, 22)
+        Me.a_cambio.Size = New System.Drawing.Size(85, 26)
         Me.a_cambio.TabIndex = 11
-        Me.a_cambio.Text = "70"
+        Me.a_cambio.Text = "85"
         '
         'Label6
         '
         Me.Label6.AutoSize = true
-        Me.Label6.Location = New System.Drawing.Point(24, 74)
+        Me.Label6.Location = New System.Drawing.Point(27, 92)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(21, 17)
+        Me.Label6.Size = New System.Drawing.Size(24, 20)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "B:"
         '
         'Label7
         '
         Me.Label7.AutoSize = true
-        Me.Label7.Location = New System.Drawing.Point(24, 38)
+        Me.Label7.Location = New System.Drawing.Point(27, 48)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(21, 17)
+        Me.Label7.Size = New System.Drawing.Size(24, 20)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "A:"
         '
@@ -551,50 +654,50 @@ Partial Class Form1
         Me.GroupBox6.Controls.Add(Me.a_ampliacion)
         Me.GroupBox6.Controls.Add(Me.Label10)
         Me.GroupBox6.Controls.Add(Me.Label11)
-        Me.GroupBox6.Location = New System.Drawing.Point(31, 208)
-        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox6.Location = New System.Drawing.Point(34, 260)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox6.Size = New System.Drawing.Size(216, 137)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox6.Size = New System.Drawing.Size(243, 171)
         Me.GroupBox6.TabIndex = 12
         Me.GroupBox6.TabStop = false
         Me.GroupBox6.Text = "Ampliacion de memoria"
         '
         'b_ampliacion
         '
-        Me.b_ampliacion.Location = New System.Drawing.Point(55, 70)
-        Me.b_ampliacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.b_ampliacion.Location = New System.Drawing.Point(62, 88)
+        Me.b_ampliacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.b_ampliacion.Name = "b_ampliacion"
-        Me.b_ampliacion.Size = New System.Drawing.Size(76, 22)
+        Me.b_ampliacion.Size = New System.Drawing.Size(85, 26)
         Me.b_ampliacion.TabIndex = 9
-        Me.b_ampliacion.Text = "69"
+        Me.b_ampliacion.Text = "65"
         '
         'a_ampliacion
         '
-        Me.a_ampliacion.Location = New System.Drawing.Point(55, 34)
-        Me.a_ampliacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.a_ampliacion.Location = New System.Drawing.Point(62, 43)
+        Me.a_ampliacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.a_ampliacion.Name = "a_ampliacion"
-        Me.a_ampliacion.Size = New System.Drawing.Size(76, 22)
+        Me.a_ampliacion.Size = New System.Drawing.Size(85, 26)
         Me.a_ampliacion.TabIndex = 11
         Me.a_ampliacion.Text = "55"
         '
         'Label10
         '
         Me.Label10.AutoSize = true
-        Me.Label10.Location = New System.Drawing.Point(24, 74)
+        Me.Label10.Location = New System.Drawing.Point(27, 92)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(21, 17)
+        Me.Label10.Size = New System.Drawing.Size(24, 20)
         Me.Label10.TabIndex = 8
         Me.Label10.Text = "B:"
         '
         'Label11
         '
         Me.Label11.AutoSize = true
-        Me.Label11.Location = New System.Drawing.Point(24, 38)
+        Me.Label11.Location = New System.Drawing.Point(27, 48)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(21, 17)
+        Me.Label11.Size = New System.Drawing.Size(24, 20)
         Me.Label11.TabIndex = 10
         Me.Label11.Text = "A:"
         '
@@ -604,50 +707,50 @@ Partial Class Form1
         Me.GroupBox8.Controls.Add(Me.a_placa)
         Me.GroupBox8.Controls.Add(Me.Label14)
         Me.GroupBox8.Controls.Add(Me.Label15)
-        Me.GroupBox8.Location = New System.Drawing.Point(285, 39)
-        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox8.Location = New System.Drawing.Point(321, 49)
+        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox8.Size = New System.Drawing.Size(216, 137)
+        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox8.Size = New System.Drawing.Size(243, 171)
         Me.GroupBox8.TabIndex = 12
         Me.GroupBox8.TabStop = false
         Me.GroupBox8.Text = "Cambio de placa"
         '
         'b_placa
         '
-        Me.b_placa.Location = New System.Drawing.Point(55, 70)
-        Me.b_placa.Margin = New System.Windows.Forms.Padding(4)
+        Me.b_placa.Location = New System.Drawing.Point(62, 88)
+        Me.b_placa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.b_placa.Name = "b_placa"
-        Me.b_placa.Size = New System.Drawing.Size(76, 22)
+        Me.b_placa.Size = New System.Drawing.Size(85, 26)
         Me.b_placa.TabIndex = 9
-        Me.b_placa.Text = "29"
+        Me.b_placa.Text = "125"
         '
         'a_placa
         '
-        Me.a_placa.Location = New System.Drawing.Point(55, 34)
-        Me.a_placa.Margin = New System.Windows.Forms.Padding(4)
+        Me.a_placa.Location = New System.Drawing.Point(62, 43)
+        Me.a_placa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.a_placa.Name = "a_placa"
-        Me.a_placa.Size = New System.Drawing.Size(76, 22)
+        Me.a_placa.Size = New System.Drawing.Size(85, 26)
         Me.a_placa.TabIndex = 11
-        Me.a_placa.Text = "0"
+        Me.a_placa.Text = "115"
         '
         'Label14
         '
         Me.Label14.AutoSize = true
-        Me.Label14.Location = New System.Drawing.Point(24, 74)
+        Me.Label14.Location = New System.Drawing.Point(27, 92)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(21, 17)
+        Me.Label14.Size = New System.Drawing.Size(24, 20)
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "B:"
         '
         'Label15
         '
         Me.Label15.AutoSize = true
-        Me.Label15.Location = New System.Drawing.Point(24, 38)
+        Me.Label15.Location = New System.Drawing.Point(27, 48)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(21, 17)
+        Me.Label15.Size = New System.Drawing.Size(24, 20)
         Me.Label15.TabIndex = 10
         Me.Label15.Text = "A:"
         '
@@ -657,59 +760,59 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.a_llegada)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(31, 39)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Location = New System.Drawing.Point(34, 49)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(216, 137)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox2.Size = New System.Drawing.Size(243, 171)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = false
         Me.GroupBox2.Text = "Llegada computadoras"
         '
         'b_llegada
         '
-        Me.b_llegada.Location = New System.Drawing.Point(55, 70)
-        Me.b_llegada.Margin = New System.Windows.Forms.Padding(4)
+        Me.b_llegada.Location = New System.Drawing.Point(62, 88)
+        Me.b_llegada.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.b_llegada.Name = "b_llegada"
-        Me.b_llegada.Size = New System.Drawing.Size(76, 22)
+        Me.b_llegada.Size = New System.Drawing.Size(85, 26)
         Me.b_llegada.TabIndex = 9
         Me.b_llegada.Text = "90"
         '
         'a_llegada
         '
-        Me.a_llegada.Location = New System.Drawing.Point(55, 34)
-        Me.a_llegada.Margin = New System.Windows.Forms.Padding(4)
+        Me.a_llegada.Location = New System.Drawing.Point(62, 43)
+        Me.a_llegada.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.a_llegada.Name = "a_llegada"
-        Me.a_llegada.Size = New System.Drawing.Size(76, 22)
+        Me.a_llegada.Size = New System.Drawing.Size(85, 26)
         Me.a_llegada.TabIndex = 11
         Me.a_llegada.Text = "30"
         '
         'Label4
         '
         Me.Label4.AutoSize = true
-        Me.Label4.Location = New System.Drawing.Point(24, 74)
+        Me.Label4.Location = New System.Drawing.Point(27, 92)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(21, 17)
+        Me.Label4.Size = New System.Drawing.Size(24, 20)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "B:"
         '
         'Label5
         '
         Me.Label5.AutoSize = true
-        Me.Label5.Location = New System.Drawing.Point(24, 38)
+        Me.Label5.Location = New System.Drawing.Point(27, 48)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(21, 17)
+        Me.Label5.Size = New System.Drawing.Size(24, 20)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "A:"
         '
         'Borrar
         '
-        Me.Borrar.Location = New System.Drawing.Point(1625, 704)
-        Me.Borrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.Borrar.Location = New System.Drawing.Point(1898, 1098)
+        Me.Borrar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Borrar.Name = "Borrar"
-        Me.Borrar.Size = New System.Drawing.Size(100, 28)
+        Me.Borrar.Size = New System.Drawing.Size(112, 35)
         Me.Borrar.TabIndex = 8
         Me.Borrar.Text = "Borrar"
         Me.Borrar.UseVisualStyleBackColor = true
@@ -722,11 +825,11 @@ Partial Class Form1
         Me.GroupBox9.Controls.Add(Me.ocupacion_tecnicos)
         Me.GroupBox9.Controls.Add(Me.prom_permanencia)
         Me.GroupBox9.Controls.Add(Me.Label18)
-        Me.GroupBox9.Location = New System.Drawing.Point(1213, 129)
-        Me.GroupBox9.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox9.Location = New System.Drawing.Point(1365, 162)
+        Me.GroupBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox9.Size = New System.Drawing.Size(512, 182)
+        Me.GroupBox9.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox9.Size = New System.Drawing.Size(576, 228)
         Me.GroupBox9.TabIndex = 9
         Me.GroupBox9.TabStop = false
         Me.GroupBox9.Text = "Resultados"
@@ -734,81 +837,69 @@ Partial Class Form1
         'Label16
         '
         Me.Label16.AutoSize = true
-        Me.Label16.Location = New System.Drawing.Point(105, 117)
+        Me.Label16.Location = New System.Drawing.Point(118, 146)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(267, 17)
+        Me.Label16.Size = New System.Drawing.Size(297, 20)
         Me.Label16.TabIndex = 12
         Me.Label16.Text = "Porcentaje de ocupación de los técnicos:"
         '
         'cant_no_atendidos
         '
-        Me.cant_no_atendidos.Location = New System.Drawing.Point(381, 74)
-        Me.cant_no_atendidos.Margin = New System.Windows.Forms.Padding(4)
+        Me.cant_no_atendidos.Location = New System.Drawing.Point(429, 92)
+        Me.cant_no_atendidos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cant_no_atendidos.Name = "cant_no_atendidos"
         Me.cant_no_atendidos.ReadOnly = true
-        Me.cant_no_atendidos.Size = New System.Drawing.Size(109, 22)
+        Me.cant_no_atendidos.Size = New System.Drawing.Size(122, 26)
         Me.cant_no_atendidos.TabIndex = 13
         '
         'Label17
         '
         Me.Label17.AutoSize = true
-        Me.Label17.Location = New System.Drawing.Point(31, 78)
+        Me.Label17.Location = New System.Drawing.Point(34, 97)
         Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(344, 17)
+        Me.Label17.Size = New System.Drawing.Size(382, 20)
         Me.Label17.TabIndex = 14
         Me.Label17.Text = "Porcentaje de equipos que no pueden ser atendidos:"
         '
         'ocupacion_tecnicos
         '
-        Me.ocupacion_tecnicos.Location = New System.Drawing.Point(381, 113)
-        Me.ocupacion_tecnicos.Margin = New System.Windows.Forms.Padding(4)
+        Me.ocupacion_tecnicos.Location = New System.Drawing.Point(429, 142)
+        Me.ocupacion_tecnicos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ocupacion_tecnicos.Name = "ocupacion_tecnicos"
         Me.ocupacion_tecnicos.ReadOnly = true
-        Me.ocupacion_tecnicos.Size = New System.Drawing.Size(109, 22)
+        Me.ocupacion_tecnicos.Size = New System.Drawing.Size(122, 26)
         Me.ocupacion_tecnicos.TabIndex = 15
         '
         'prom_permanencia
         '
-        Me.prom_permanencia.Location = New System.Drawing.Point(381, 36)
-        Me.prom_permanencia.Margin = New System.Windows.Forms.Padding(4)
+        Me.prom_permanencia.Location = New System.Drawing.Point(429, 45)
+        Me.prom_permanencia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.prom_permanencia.Name = "prom_permanencia"
         Me.prom_permanencia.ReadOnly = true
-        Me.prom_permanencia.Size = New System.Drawing.Size(109, 22)
+        Me.prom_permanencia.Size = New System.Drawing.Size(122, 26)
         Me.prom_permanencia.TabIndex = 17
         '
         'Label18
         '
         Me.Label18.AutoSize = true
-        Me.Label18.Location = New System.Drawing.Point(8, 39)
+        Me.Label18.Location = New System.Drawing.Point(9, 49)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(372, 17)
+        Me.Label18.Size = New System.Drawing.Size(411, 20)
         Me.Label18.TabIndex = 16
         Me.Label18.Text = "Promedio de permanencia en el laboratorio de un equipo:"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1200, 368)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Limpiar"
-        Me.Button1.UseVisualStyleBackColor = true
         '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.RadioButton2)
-        Me.GroupBox10.Controls.Add(Me.RadioButton1)
         Me.GroupBox10.Controls.Add(Me.Iteraciones)
-        Me.GroupBox10.Controls.Add(Me.tiempo)
-        Me.GroupBox10.Location = New System.Drawing.Point(16, 31)
-        Me.GroupBox10.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox10.Location = New System.Drawing.Point(18, 38)
+        Me.GroupBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox10.Size = New System.Drawing.Size(336, 123)
+        Me.GroupBox10.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox10.Size = New System.Drawing.Size(378, 154)
         Me.GroupBox10.TabIndex = 11
         Me.GroupBox10.TabStop = false
         Me.GroupBox10.Text = "Simular por:"
@@ -817,47 +908,275 @@ Partial Class Form1
         '
         Me.RadioButton2.AutoSize = true
         Me.RadioButton2.Checked = true
-        Me.RadioButton2.Location = New System.Drawing.Point(8, 66)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButton2.Location = New System.Drawing.Point(9, 83)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(98, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(113, 24)
         Me.RadioButton2.TabIndex = 13
         Me.RadioButton2.TabStop = true
         Me.RadioButton2.Text = "Iteraciones"
         Me.RadioButton2.UseVisualStyleBackColor = true
         '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = true
-        Me.RadioButton1.Location = New System.Drawing.Point(8, 25)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(76, 21)
-        Me.RadioButton1.TabIndex = 12
-        Me.RadioButton1.Text = "Tiempo"
-        Me.RadioButton1.UseVisualStyleBackColor = true
-        '
         'Iteraciones
         '
-        Me.Iteraciones.Location = New System.Drawing.Point(124, 66)
-        Me.Iteraciones.Margin = New System.Windows.Forms.Padding(4)
+        Me.Iteraciones.Location = New System.Drawing.Point(140, 83)
+        Me.Iteraciones.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Iteraciones.Name = "Iteraciones"
-        Me.Iteraciones.Size = New System.Drawing.Size(203, 22)
+        Me.Iteraciones.Size = New System.Drawing.Size(228, 26)
         Me.Iteraciones.TabIndex = 12
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = false
+        Me.DataGridView2.AllowUserToDeleteRows = false
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Menu
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35})
+        Me.DataGridView2.Location = New System.Drawing.Point(-7, 505)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = true
+        Me.DataGridView2.Size = New System.Drawing.Size(1870, 477)
+        Me.DataGridView2.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Reloj"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Evento"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "RND Llegada"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Tiempo Entre Llegadas"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        DataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle50
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Proxima Llegada"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "RND Tipo Reparacion"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Tipo Reparacion"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "RND Tiempo Tecnico1"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "TA Tecnico1"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        DataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle51
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Fin Atencion Tecnico1"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Estado Tecnico1"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        DataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle52
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Fin Primeros 15 min Tipo C Tecnico 1"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        DataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle53
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Fin Espera Tipo C Tecnico 1"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "RND Tiempo Tecnico2"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "TA Tecnico 2"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        DataGridViewCellStyle54.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle54
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Fin Atencion Tecnico2"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Estado Tecnico2"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        DataGridViewCellStyle55.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle55
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Fin primeros 15 min Tipo C Tecnico 2"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        DataGridViewCellStyle56.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.DataGridViewTextBoxColumn19.DefaultCellStyle = DataGridViewCellStyle56
+        Me.DataGridViewTextBoxColumn19.HeaderText = "Fin Espera Tipo C Tecnico 2"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.HeaderText = "Cola"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Acumulador Tiempo Ocupacion"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "Contador Computadoras Atendidas"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.HeaderText = "Contador Computadoras No Atendidas"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.HeaderText = "Acumulador Permanencia"
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.HeaderText = "Nro Iteracion"
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = true
+        Me.DataGridViewTextBoxColumn25.Visible = false
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        Me.DataGridViewTextBoxColumn26.HeaderText = "EstadoComputadora"
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.HeaderText = "finAtencionC1"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.HeaderText = "EstadoComputadora2"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.HeaderText = "finAtencionC2"
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        Me.DataGridViewTextBoxColumn30.HeaderText = "EstadoComputadora3"
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn31
+        '
+        Me.DataGridViewTextBoxColumn31.HeaderText = "finAtencionC3"
+        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn32
+        '
+        Me.DataGridViewTextBoxColumn32.HeaderText = "EstadoComputadora4"
+        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn32.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn33
+        '
+        Me.DataGridViewTextBoxColumn33.HeaderText = "finAtencionC4"
+        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn34
+        '
+        Me.DataGridViewTextBoxColumn34.HeaderText = "EstadoComputadora5"
+        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
+        Me.DataGridViewTextBoxColumn34.ReadOnly = true
+        '
+        'DataGridViewTextBoxColumn35
+        '
+        Me.DataGridViewTextBoxColumn35.HeaderText = "finAtencionC5"
+        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
+        Me.DataGridViewTextBoxColumn35.ReadOnly = true
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9!, 20!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1741, 750)
+        Me.ClientSize = New System.Drawing.Size(1898, 1024)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.GroupBox10)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox9)
         Me.Controls.Add(Me.Borrar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
         Me.Text = "TP5"
         CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
@@ -880,11 +1199,11 @@ Partial Class Form1
         Me.GroupBox9.PerformLayout
         Me.GroupBox10.ResumeLayout(false)
         Me.GroupBox10.PerformLayout
+        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
 
 End Sub
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents tiempo As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
@@ -930,37 +1249,78 @@ End Sub
     Friend WithEvents ocupacion_tecnicos As System.Windows.Forms.TextBox
     Friend WithEvents prom_permanencia As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Iteraciones As System.Windows.Forms.TextBox
-    Friend WithEvents reloj As DataGridViewTextBoxColumn
-    Friend WithEvents evento As DataGridViewTextBoxColumn
-    Friend WithEvents rnd_llegada As DataGridViewTextBoxColumn
-    Friend WithEvents tel_llegada As DataGridViewTextBoxColumn
-    Friend WithEvents prox_llegada As DataGridViewTextBoxColumn
-    Friend WithEvents rnd_tipo As DataGridViewTextBoxColumn
-    Friend WithEvents tipo_reparacion As DataGridViewTextBoxColumn
-    Friend WithEvents rnd_tecnico1 As DataGridViewTextBoxColumn
-    Friend WithEvents tiempo_at1 As DataGridViewTextBoxColumn
-    Friend WithEvents fin_at1 As DataGridViewTextBoxColumn
-    Friend WithEvents estado1 As DataGridViewTextBoxColumn
-    Friend WithEvents FinPrimeros15minTecnico1 As DataGridViewTextBoxColumn
-    Friend WithEvents FinEsperaTipoCTecnico1 As DataGridViewTextBoxColumn
-    Friend WithEvents rnd_tecnico2 As DataGridViewTextBoxColumn
-    Friend WithEvents tiempo_at2 As DataGridViewTextBoxColumn
-    Friend WithEvents fin_at2 As DataGridViewTextBoxColumn
-    Friend WithEvents estado2 As DataGridViewTextBoxColumn
-    Friend WithEvents fin_1c As DataGridViewTextBoxColumn
-    Friend WithEvents fin_2c As DataGridViewTextBoxColumn
-    Friend WithEvents cola As DataGridViewTextBoxColumn
-    Friend WithEvents ac_tiempo_ocupacion As DataGridViewTextBoxColumn
-    Friend WithEvents cont_comp As DataGridViewTextBoxColumn
-    Friend WithEvents cont_no_atendidas As DataGridViewTextBoxColumn
-    Friend WithEvents permanencia As DataGridViewTextBoxColumn
-    Friend WithEvents nro_iteracion As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoComputadora As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoComputadora2 As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoComputadora3 As DataGridViewTextBoxColumn
+    Friend WithEvents reloj As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents evento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents rnd_llegada As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tel_llegada As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents prox_llegada As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents rnd_tipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tipo_reparacion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents rnd_tecnico1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tiempo_at1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fin_at1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents estado1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FinPrimeros15minTecnico1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FinEsperaTipoCTecnico1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents rnd_tecnico2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tiempo_at2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fin_at2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents estado2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fin_1c As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fin_2c As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cola As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ac_tiempo_ocupacion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cont_comp As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cont_no_atendidas As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents permanencia As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nro_iteracion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents finAtencionC1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents finAtencionC2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents finAtencionC3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents finAtencionC4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstadoComputadora5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents finAtencionC5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn29 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn30 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn33 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn34 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn35 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
