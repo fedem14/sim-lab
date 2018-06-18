@@ -35,14 +35,14 @@
         Dim estadocomputadora4 As String
         Dim estadocomputadora5 As String
         Dim FinAtC1 As Decimal
-        Dim FinAtC2 As Decimal
+        Dim finAtC2 As Decimal
         Dim FinAtC3 As Decimal
         Dim FinAtC4 As Decimal
         Dim FinAtC5 As Decimal
         Dim primeraVez As Boolean = True
 
         FinAtC1 = 0
-        FinAtC2 = 0
+        finAtC2 = 0
         FinAtC3 = 0
         FinAtC4 = 0
         FinAtC5 = 0
@@ -72,7 +72,7 @@
 
         For i = 0 To (R - 1)
             ' i += 1 En visual basic el mismo Next va de 1 en 1 si agregan esta linea iria de 2 en 2
-            #Region "Llegada Computadora"
+            #Region "Inicializacion"
             If primeraVez Then
                 'LLEGADA_COMPUTADORA
                 rnd_llegada = Math.Round(RND.NextDouble, 2)
@@ -89,7 +89,242 @@
                 N = 0
                 DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, estado_tec1, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, estado_tec2, vbNullString, vbNullString, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString, vbNullString)
                 primeraVez = False
+      #End Region 
+            #Region "Esperando 15 minutos C1"
+              ElseIf estadocomputadora = "Esperando 15 minutos" AndAlso ((finAtC1 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((finAtC1 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((finAtC1 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((finAtC1 < fin_15c1) Or fin_15c1 = 0) AndAlso ((estadocomputadora2="Esperando 15 minutos" AndAlso finAtC1 < finAtC2) Or estadocomputadora2 <> "Esperando 15 minutos") AndAlso 
+                ((estadocomputadora3="Esperando 15 minutos" AndAlso finAtC1 < finAtC3) Or estadocomputadora3 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora4="Esperando 15 minutos" AndAlso finAtC1 < finAtC4) Or estadocomputadora4 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora5="Esperando 15 minutos" AndAlso finAtC1 < finAtC5) Or estadocomputadora5 <> "Esperando 15 minutos") Then
+                N = finAtC1
+                evento = "Volver a equipo"
 
+                If estado_tec1 = "Libre" Then
+
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+                ElseIf estado_tec2 = "Libre" Then
+
+                    estado_tec2 = "Ocupado"
+                    estadocomputadora = "Siendo reparada 2"
+                    fin_atencion2 = N + 15
+
+                ElseIf estado_tec1 = "Ocupado" Then
+                    cola += 1
+                    If estadocomputadora2 = "Siendo reparada 1" Then
+                        estadocomputadora2 = "Esperando atencion"
+                        finAtC2 = fin_atencion1 - N
+                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
+                        estadocomputadora3 = "Esperando atencion"
+                        FinAtC3 = fin_atencion1 - N
+                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
+                        estadocomputadora4 = "Esperando atencion"
+                        FinAtC4 = fin_atencion1 - N
+                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
+                        estadocomputadora5 = "Esperando atencion"
+                        FinAtC5 = fin_atencion1 - N
+                    End If
+
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+
+                    contador_comp += 1
+                    acum_tiempo_atencion += finespera_15c1 - N
+
+                    acum_permanencia += 0
+                End If
+                finAtC2 = 0
+                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+
+                #End Region
+            #Region "Esperando 15 minutos C2"
+              ElseIf estadocomputadora2 = "Esperando 15 minutos" AndAlso ((finAtC2 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((finAtC2 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((finAtC2 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((finAtC2 < fin_15c1) Or fin_15c1 = 0) AndAlso ((estadocomputadora="Esperando 15 minutos" AndAlso finAtC2 < finAtC1) Or estadocomputadora <> "Esperando 15 minutos") AndAlso 
+                ((estadocomputadora3="Esperando 15 minutos" AndAlso finAtC2 < finAtC3) Or estadocomputadora3 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora4="Esperando 15 minutos" AndAlso finAtC2 < finAtC4) Or estadocomputadora4 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora5="Esperando 15 minutos" AndAlso finAtC2 < finAtC5) Or estadocomputadora5 <> "Esperando 15 minutos") Then
+                N = finAtC2
+                evento = "Volver a equipo"
+
+                If estado_tec1 = "Libre" Then
+
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora2 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+                ElseIf estado_tec2 = "Libre" Then
+
+                    estado_tec2 = "Ocupado"
+                    estadocomputadora2 = "Siendo reparada 2"
+                    fin_atencion2 = N + 15
+
+                ElseIf estado_tec1 = "Ocupado" Then
+                    cola += 1
+                    If estadocomputadora = "Siendo reparada 1" Then
+                        estadocomputadora = "Esperando atencion"
+                        FinAtC1 = fin_atencion1 - N
+                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
+                        estadocomputadora3 = "Esperando atencion"
+                        FinAtC3 = fin_atencion1 - N
+                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
+                        estadocomputadora4 = "Esperando atencion"
+                        FinAtC4 = fin_atencion1 - N
+                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
+                        estadocomputadora5 = "Esperando atencion"
+                        FinAtC5 = fin_atencion1 - N
+                    End If
+
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora2 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+
+                    contador_comp += 1
+                    acum_tiempo_atencion += finespera_15c1 - N
+
+                    acum_permanencia += 0
+                End If
+                finAtC2 = 0
+                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+
+                #End Region
+            #Region "Esperando 15 min C3"
+                ElseIf estadocomputadora3 = "Esperando 15 minutos" AndAlso ((FinAtC3 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC3 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC3 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC3 < fin_15c1) Or fin_15c1 = 0) AndAlso ((estadocomputadora="Esperando 15 minutos" AndAlso finAtC3 < finAtC1) Or estadocomputadora <> "Esperando 15 minutos") AndAlso 
+                ((estadocomputadora2="Esperando 15 minutos" AndAlso finAtC3 < finAtC2) Or estadocomputadora3 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora4="Esperando 15 minutos" AndAlso finAtC3 < finAtC4) Or estadocomputadora4 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora5="Esperando 15 minutos" AndAlso finAtC3 < finAtC5) Or estadocomputadora5 <> "Esperando 15 minutos") Then
+                N = FinAtC3
+                evento = "Volver a equipo"
+
+                If estado_tec1 = "Libre" Then
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora3 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+                ElseIf estado_tec2 = "Libre" Then
+                    estado_tec2 = "Ocupado"
+                    estadocomputadora3 = "Siendo reparada 2"
+                    fin_atencion2 = N + 15
+
+                ElseIf estado_tec1 = "Ocupado" Then
+                    cola += 1
+                    If estadocomputadora2 = "Siendo reparada 1" Then
+                        estadocomputadora2 = "Esperando atencion"
+                        finAtC2 = fin_atencion1 - N
+                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
+                        estadocomputadora5 = "Esperando atencion"
+                        FinAtC5 = fin_atencion1 - N
+                    ElseIf estadocomputadora = "Siendo reparada 1" Then
+                        estadocomputadora = "Esperando atencion"
+                        FinAtC1 = fin_atencion1 - N
+                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
+                        estadocomputadora4 = "Esperando atencion"
+                        FinAtC4 = fin_atencion1 - N
+                     End If
+
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora5 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+
+                    contador_comp += 1
+                    acum_tiempo_atencion += finespera_15c1 - N
+
+                    acum_permanencia += 0
+                End If
+                FinAtC5 = 0
+                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+
+            #End Region
+                #Region "Esperando 15 min C4"
+                ElseIf estadocomputadora4 = "Esperando 15 minutos" AndAlso ((finAtC4 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((finAtC4 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((finAtC4 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((finAtC4 < fin_15c1) Or fin_15c1 = 0) AndAlso ((estadocomputadora="Esperando 15 minutos" AndAlso finAtC4 < finAtC1) Or estadocomputadora <> "Esperando 15 minutos") AndAlso 
+                ((estadocomputadora3="Esperando 15 minutos" AndAlso finAtC4 < finAtC3) Or estadocomputadora3 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora2="Esperando 15 minutos" AndAlso finAtC4 < finAtC2) Or estadocomputadora2 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora5="Esperando 15 minutos" AndAlso finAtC4 < finAtC5) Or estadocomputadora5 <> "Esperando 15 minutos") Then
+                N = FinAtC4
+                evento = "Volver a equipo"
+
+                If estado_tec1 = "Libre" Then
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora4 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+                ElseIf estado_tec2 = "Libre" Then
+                    estado_tec2 = "Ocupado"
+                    estadocomputadora4 = "Siendo reparada 2"
+                    fin_atencion2 = N + 15
+                ElseIf estado_tec1 = "Ocupado" Then
+                    cola += 1
+
+                    If estadocomputadora2 = "Siendo reparada 1" Then
+                        estadocomputadora2 = "Esperando atencion"
+                        finAtC2 = fin_atencion1 - N
+                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
+                        estadocomputadora3 = "Esperando atencion"
+                        FinAtC3 = fin_atencion1 - N
+                    ElseIf estadocomputadora = "Siendo reparada 1" Then
+                        estadocomputadora = "Esperando atencion"
+                        FinAtC1 = fin_atencion1 - N
+                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
+                        estadocomputadora5 = "Esperando atencion"
+                        FinAtC5 = fin_atencion1 - N
+                    End If
+
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora4 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+
+                    contador_comp += 1
+                    acum_tiempo_atencion += finespera_15c1 - N
+
+                    acum_permanencia += 0
+                End If
+                FinAtC4 = 0
+                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+
+                #End Region
+                #Region "Esperando 15 minutos C5"
+                ElseIf estadocomputadora5 = "Esperando 15 minutos" AndAlso ((finAtC5 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((finAtC5 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((finAtC5 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((finAtC5 < fin_15c1) Or fin_15c1 = 0) AndAlso ((estadocomputadora="Esperando 15 minutos" AndAlso finAtC5 < finAtC1) Or estadocomputadora <> "Esperando 15 minutos") AndAlso 
+                ((estadocomputadora3="Esperando 15 minutos" AndAlso finAtC5 < finAtC3) Or estadocomputadora3 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora2="Esperando 15 minutos" AndAlso finAtC5 < finAtC2) Or estadocomputadora2 <> "Esperando 15 minutos") AndAlso
+                ((estadocomputadora4="Esperando 15 minutos" AndAlso finAtC5 < finAtC4) Or estadocomputadora4 <> "Esperando 15 minutos") Then
+                N = FinAtC5
+                evento = "Volver a equipo"
+
+                If estado_tec1 = "Libre" Then
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora5 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+                ElseIf estado_tec2 = "Libre" Then
+
+                    estado_tec2 = "Ocupado"
+                    estadocomputadora5 = "Siendo reparada 2"
+                    fin_atencion2 = N + 15
+
+                ElseIf estado_tec1 = "Ocupado" Then
+                    cola += 1
+
+                    If estadocomputadora2 = "Siendo reparada 1" Then
+                        estadocomputadora2 = "Esperando atencion"
+                        finAtC2 = fin_atencion1 - N
+                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
+                        estadocomputadora3 = "Esperando atencion"
+                        FinAtC3 = fin_atencion1 - N
+                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
+                        estadocomputadora4 = "Esperando atencion"
+                        FinAtC4 = fin_atencion1 - N
+                    ElseIf estadocomputadora = "Siendo reparada 1" Then
+                        estadocomputadora = "Esperando atencion"
+                        FinAtC1 = fin_atencion1 - N
+                    End If
+                    estado_tec1 = "Ocupado"
+                    estadocomputadora5 = "Siendo reparada 1"
+                    fin_atencion1 = N + 15
+
+                    contador_comp += 1
+                    acum_tiempo_atencion += finespera_15c1 - N
+
+                    acum_permanencia += 0
+                End If
+                FinAtC3 = 0
+                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+#End Region
+                #Region "Llegada computadora"
             ElseIf (((proxima_llegada < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((proxima_llegada < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((proxima_llegada < fin_15c1) Or fin_15c1 = 0) AndAlso ((proxima_llegada < fin_15c2) Or fin_15c2 = 0) AndAlso proxima_llegada <> 0) Then
                 N = proxima_llegada
                 evento = "Llegada computadora"
@@ -118,7 +353,7 @@
                             estadocomputadora5 = "Esperando atencion"
                         End If
                     End If
-                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, "", "", vbNullString, vbNullString, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, "", "", vbNullString, vbNullString, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                 Else
                     If estado_tec1 = "Libre" Then
                         estado_tec1 = "Ocupado"
@@ -165,7 +400,7 @@
                             FinAtC1 = tiempo_atencion1
                         ElseIf estadocomputadora2 = " " Then
                             estadocomputadora2 = "Siendo reparada 1"
-                            FinAtC2 = tiempo_atencion1
+                            finAtC2 = tiempo_atencion1
                         ElseIf estadocomputadora3 = " " Then
                             estadocomputadora3 = "Siendo reparada 1"
                             FinAtC3 = tiempo_atencion1
@@ -178,7 +413,7 @@
                         End If
                         contador_comp += 1
                         acum_permanencia += tiempo_atencion1
-                        DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                        DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
 
                     ElseIf estado_tec2 = "Libre" Then
                         estado_tec2 = "Ocupado"
@@ -233,7 +468,7 @@
                         contador_comp += 1
                         acum_tiempo_atencion += proxima_llegada - N
                         acum_permanencia += tiempo_atencion2
-                        DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, vbNullString, vbNullString, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, rnd_atencion2, tiempo_atencion2, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                        DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, vbNullString, vbNullString, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, rnd_atencion2, tiempo_atencion2, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                     End If
                 End If
 
@@ -249,7 +484,7 @@
                     FinAtC1 = 0
                     estadocomputadora = " "
                 ElseIf estadocomputadora2 = "Siendo reparada 1" Then
-                    FinAtC2 = 0
+                    finAtC2 = 0
                     estadocomputadora2 = " "
                 ElseIf estadocomputadora3 = "Siendo reparada 1" Then
                     FinAtC3 = 0
@@ -317,14 +552,14 @@
                         acum_tiempo_atencion += tiempo_atencion1
                     End If
                     acum_permanencia += 0
-                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
 
                 Else
                     estado_tec1 = "Libre"
                     If estado_tec2 = "Ocupado" Then
                         acum_tiempo_atencion += tiempo_atencion1
                     End If
-                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, "", "", vbNullString, vbNullString, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, "", "", vbNullString, vbNullString, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                 End If
                 #End Region
                 #Region "Fin Atencion Tecnico 2"
@@ -343,7 +578,7 @@
                     FinAtC1 = 0
                 ElseIf estadocomputadora2 = "Siendo reparada 2" Then
                     estadocomputadora2 = " "
-                    FinAtC2 = 0
+                    finAtC2 = 0
                 ElseIf estadocomputadora3 = "Siendo reparada 2" Then
                     estadocomputadora3 = " "
                     FinAtC3 = 0
@@ -410,13 +645,13 @@
                         acum_tiempo_atencion += tiempo_atencion2
                     End If
                     acum_permanencia += 0
-                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, "", fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, rnd_atencion2, tiempo_atencion2, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, "", fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, rnd_atencion2, tiempo_atencion2, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                 Else
                     estado_tec2 = "Libre"
                     If estado_tec1 = "Ocupado" Then
                         acum_tiempo_atencion += tiempo_atencion2
                     End If
-                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                 End If
                 #End Region
 
@@ -435,7 +670,7 @@
                     FinAtC1 = finespera_15c1
                 ElseIf estadocomputadora2 = "Siendo reparada 1" Then
                     estadocomputadora2 = "Esperando 15 minutos"
-                    FinAtC2 = finespera_15c1
+                    finAtC2 = finespera_15c1
                 ElseIf estadocomputadora3 = "Siendo reparada 1" Then
                     estadocomputadora3 = "Esperando 15 minutos"
                     FinAtC3 = finespera_15c1
@@ -490,7 +725,7 @@
                         FinAtC1 = tiempo_atencion1
                     ElseIf estadocomputadora2 = "Esperando atencion" Then
                         estadocomputadora = "Siendo reparada 1"
-                        FinAtC2 = tiempo_atencion1
+                        finAtC2 = tiempo_atencion1
                     ElseIf estadocomputadora3 = "Esperando atencion" Then
                         estadocomputadora3 = "Siendo reparada 1"
                         FinAtC3 = tiempo_atencion1
@@ -503,12 +738,12 @@
                     End If
                     contador_comp += 1
                     acum_permanencia += 0
-                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
 
                 Else
 
                     estado_tec1 = "Libre"
-                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                 End If
                
             ElseIf ((fin_15c2 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((fin_15c2 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((fin_15c2 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((fin_15c2 < fin_15c1) Or fin_15c1 = 0) AndAlso (fin_15c2 <> 0) Then
@@ -524,7 +759,7 @@
                     FinAtC1 = finespera_15c2
                 ElseIf estadocomputadora2 = "Siendo reparada 2" Then
                     estadocomputadora2 = "Esperando 15 minutos"
-                    FinAtC2 = finespera_15c2
+                    finAtC2 = finespera_15c2
                 ElseIf estadocomputadora3 = "Siendo reparada 2" Then
                     estadocomputadora3 = "Esperando 15 minutos"
                     FinAtC3 = finespera_15c2
@@ -580,7 +815,7 @@
                         FinAtC1 = tiempo_atencion2
                     ElseIf estadocomputadora2 = "Esperando atencion" Then
                         estadocomputadora = "Siendo reparada 2"
-                        FinAtC2 = tiempo_atencion2
+                        finAtC2 = tiempo_atencion2
                     ElseIf estadocomputadora3 = "Esperando atencion" Then
                         estadocomputadora3 = "Siendo reparada 2"
                         FinAtC3 = tiempo_atencion2
@@ -594,7 +829,7 @@
                     contador_comp += 1
 
                     acum_permanencia += 0
-                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
 
                 Else
                     estado_tec2 = "Libre"
@@ -603,11 +838,11 @@
                     End If
 
 
-                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+                    DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
                 End If
                 #End Region
                 #Region "Volver el equipo"
-            ElseIf estadocomputadora = "Esperando 15 minutos" AndAlso ((FinAtC1 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC1 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC1 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC1 < fin_15c1) Or fin_15c1 = 0) AndAlso ((FinAtC1 < FinAtC2) Or FinAtC2 = 0) AndAlso ((FinAtC1 < FinAtC3) Or FinAtC3 = 0) AndAlso ((FinAtC1 < FinAtC4) Or FinAtC4 = 0) AndAlso ((FinAtC1 < FinAtC5) Or FinAtC5 = 0) AndAlso (FinAtC1 <> 0) Then
+            ElseIf estadocomputadora = "Esperando 15 minutos" AndAlso ((FinAtC1 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC1 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC1 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC1 < fin_15c1) Or fin_15c1 = 0) AndAlso ((FinAtC1 < finAtC2) Or finAtC2 = 0) AndAlso ((FinAtC1 < FinAtC3) Or FinAtC3 = 0) AndAlso ((FinAtC1 < FinAtC4) Or FinAtC4 = 0) AndAlso ((FinAtC1 < FinAtC5) Or FinAtC5 = 0) AndAlso (FinAtC1 <> 0) Then
                 N = FinAtC1
                 evento = "Volver a equipo"
 
@@ -626,7 +861,7 @@
                     cola += 1
                     If estadocomputadora2 = "Siendo reparada 1" Then
                         estadocomputadora2 = "Esperando atencion"
-                        FinAtC2 = fin_atencion1 - N
+                        finAtC2 = fin_atencion1 - N
                     ElseIf estadocomputadora3 = "Siendo reparada 1" Then
                         estadocomputadora3 = "Esperando atencion"
                         FinAtC3 = fin_atencion1 - N
@@ -647,181 +882,18 @@
                     acum_permanencia += 0
                 End If
                 FinAtC1 = vbNullString
-              DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, "", "", "", "", fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+              DataGridView1.Rows.Add(N, evento, "", "", proxima_llegada, "", "", "", "", fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
 
 
                 #End Region
                 '#Region "Volver el equipo T2"
-            ElseIf estadocomputadora2 = "Esperando 15 minutos" AndAlso ((FinAtC2 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC2 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC2 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC2 < fin_15c1) Or fin_15c1 = 0) AndAlso (((FinAtC2 < FinAtC1) Or FinAtC1 = 0 ) AndAlso estadocomputadora="Esperando 15 minutos") AndAlso (((FinAtC2 < FinAtC3) Or FinAtC3 = 0) AndAlso estadocomputadora3="Esperando 15 minutos") AndAlso (((FinAtC2 < FinAtC4) Or FinAtC4 = 0) AndAlso estadocomputadora4="Esperando 15 minutos") AndAlso (((FinAtC2 < FinAtC5) Or FinAtC5 = 0) AndAlso estadocomputadora5="Esperando 15 minutos") AndAlso (FinAtC2 <> 0) Then
-                N = FinAtC2
-                evento = "Volver a equipo"
-
-                If estado_tec1 = "Libre" Then
-
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora2 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-                ElseIf estado_tec2 = "Libre" Then
-
-                    estado_tec2 = "Ocupado"
-                    estadocomputadora2 = "Siendo reparada 2"
-                    fin_atencion2 = N + 15
-
-                ElseIf estado_tec1 = "Ocupado" Then
-                    cola += 1
-                    If estadocomputadora = "Siendo reparada 1" Then
-                        estadocomputadora = "Esperando atencion"
-                        FinAtC1 = fin_atencion1 - N
-                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
-                        estadocomputadora3 = "Esperando atencion"
-                        FinAtC3 = fin_atencion1 - N
-                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
-                        estadocomputadora4 = "Esperando atencion"
-                        FinAtC4 = fin_atencion1 - N
-                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
-                        estadocomputadora5 = "Esperando atencion"
-                        FinAtC5 = fin_atencion1 - N
-                    End If
-
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-
-                    contador_comp += 1
-                    acum_tiempo_atencion += finespera_15c1 - N
-
-                    acum_permanencia += 0
-                End If
-                FinAtC2 = 0
-                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
 
 
-            ElseIf estadocomputadora3 = "Esperando 15 minutos" AndAlso ((FinAtC3 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC3 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC3 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC3 < fin_15c1) Or fin_15c1 = 0) AndAlso ((FinAtC3 < FinAtC2) Or FinAtC2 = 0) AndAlso ((FinAtC3 < FinAtC1) Or FinAtC1 = 0) AndAlso ((FinAtC3 < FinAtC4) Or FinAtC4 = 0) AndAlso ((FinAtC3 < FinAtC5) Or FinAtC5 = 0) AndAlso (FinAtC3 <> 0) Then
-                N = FinAtC3
-                evento = "Volver a equipo"
 
-                If estado_tec1 = "Libre" Then
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora3 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-                ElseIf estado_tec2 = "Libre" Then
-
-                    estado_tec2 = "Ocupado"
-                    estadocomputadora3 = "Siendo reparada 2"
-                    fin_atencion2 = N + 15
-
-                ElseIf estado_tec1 = "Ocupado" Then
-                    cola += 1
-
-                    If estadocomputadora2 = "Siendo reparada 1" Then
-                        estadocomputadora2 = "Esperando atencion"
-                        FinAtC2 = fin_atencion1 - N
-                    ElseIf estadocomputadora = "Siendo reparada 1" Then
-                        estadocomputadora3 = "Esperando atencion"
-                        FinAtC1 = fin_atencion1 - N
-                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
-                        estadocomputadora4 = "Esperando atencion"
-                        FinAtC4 = fin_atencion1 - N
-                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
-                        estadocomputadora5 = "Esperando atencion"
-                        FinAtC5 = fin_atencion1 - N
-                    End If
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora3 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-
-                    contador_comp += 1
-                    acum_tiempo_atencion += finespera_15c1 - N
-
-                    acum_permanencia += 0
-                End If
-                FinAtC3 = 0
-                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
-
-            ElseIf estadocomputadora4 = "Esperando 15 minutos" AndAlso ((FinAtC5 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC5 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC5 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC5 < fin_15c1) Or fin_15c1 = 0) AndAlso ((FinAtC5 < FinAtC2) Or FinAtC2 = 0) AndAlso ((FinAtC5 < FinAtC3) Or FinAtC3 = 0) AndAlso ((FinAtC5 < FinAtC1) Or FinAtC1 = 0) AndAlso ((FinAtC5 < FinAtC1) Or FinAtC1 = 0) AndAlso (FinAtC5 <> 0) Then
-                N = FinAtC4
-                evento = "Volver a equipo"
-
-                If estado_tec1 = "Libre" Then
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora4 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-                ElseIf estado_tec2 = "Libre" Then
-                    estado_tec2 = "Ocupado"
-                    estadocomputadora4 = "Siendo reparada 2"
-                    fin_atencion2 = N + 15
-                ElseIf estado_tec1 = "Ocupado" Then
-                    cola += 1
-
-                    If estadocomputadora2 = "Siendo reparada 1" Then
-                        estadocomputadora2 = "Esperando atencion"
-                        FinAtC2 = fin_atencion1 - N
-                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
-                        estadocomputadora3 = "Esperando atencion"
-                        FinAtC3 = fin_atencion1 - N
-                    ElseIf estadocomputadora = "Siendo reparada 1" Then
-                        estadocomputadora = "Esperando atencion"
-                        FinAtC1 = fin_atencion1 - N
-                    ElseIf estadocomputadora5 = "Siendo reparada 1" Then
-                        estadocomputadora5 = "Esperando atencion"
-                        FinAtC5 = fin_atencion1 - N
-                    End If
-
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora4 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-
-                    contador_comp += 1
-                    acum_tiempo_atencion += finespera_15c1 - N
-
-                    acum_permanencia += 0
-                End If
-                FinAtC4 = 0
-                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
-
-            ElseIf estadocomputadora5 = "Esperando 15 minutos" AndAlso ((FinAtC5 < proxima_llegada) Or proxima_llegada = 0) AndAlso ((FinAtC5 < fin_atencion1) Or fin_atencion1 = 0) AndAlso ((FinAtC5 < fin_atencion2) Or fin_atencion2 = 0) AndAlso ((FinAtC5 < fin_15c1) Or fin_15c1 = 0) AndAlso ((FinAtC5 < FinAtC2) Or FinAtC2 = 0) AndAlso ((FinAtC5 < FinAtC3) Or FinAtC3 = 0) AndAlso ((FinAtC5 < FinAtC1) Or FinAtC1 = 0) AndAlso ((FinAtC5 < FinAtC1) Or FinAtC1 = 0) AndAlso (FinAtC5 <> 0) Then
-                N = FinAtC5
-                evento = "Volver a equipo"
-
-                If estado_tec1 = "Libre" Then
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora5 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-                ElseIf estado_tec2 = "Libre" Then
-                    estado_tec2 = "Ocupado"
-                    estadocomputadora5 = "Siendo reparada 2"
-                    fin_atencion2 = N + 15
-
-                ElseIf estado_tec1 = "Ocupado" Then
-                    cola += 1
-                    If estadocomputadora2 = "Siendo reparada 1" Then
-                        estadocomputadora2 = "Esperando atencion"
-                        FinAtC2 = fin_atencion1 - N
-                    ElseIf estadocomputadora3 = "Siendo reparada 1" Then
-                        estadocomputadora3 = "Esperando atencion"
-                        FinAtC3 = fin_atencion1 - N
-                    ElseIf estadocomputadora = "Siendo reparada 1" Then
-                        estadocomputadora4 = "Esperando atencion"
-                        FinAtC1 = fin_atencion1 - N
-                    ElseIf estadocomputadora4 = "Siendo reparada 1" Then
-                        estadocomputadora4 = "Esperando atencion"
-                        FinAtC4 = fin_atencion1 - N
-                    End If
-
-                    estado_tec1 = "Ocupado"
-                    estadocomputadora5 = "Siendo reparada 1"
-                    fin_atencion1 = N + 15
-
-                    contador_comp += 1
-                    acum_tiempo_atencion += finespera_15c1 - N
-
-                    acum_permanencia += 0
-                End If
-                FinAtC5 = 0
-                DataGridView1.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, vbNullString, vbNullString, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+            
             End If
            ' If N >= txt_desde.Text And i <= cant_iteraciones.Text Then
-             '   DataGridView2.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, rnd_atencion2, tiempo_atencion2, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, FinAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
+             '   DataGridView2.Rows.Add(N, evento, rnd_llegada, tiempo_entre_llegadas, proxima_llegada, rnd_tipo_arreglo, tipo, rnd_atencion1, tiempo_atencion1, fin_atencion1, estado_tec1, fin_15c1, finespera_15c1, rnd_atencion2, tiempo_atencion2, fin_atencion2, estado_tec2, fin_15c2, finespera_15c2, cola, acum_tiempo_atencion, contador_comp, cont_no_atendidas, acum_permanencia, i, estadocomputadora, FinAtC1, estadocomputadora2, finAtC2, estadocomputadora3, FinAtC3, estadocomputadora4, FinAtC4, estadocomputadora5, FinAtC5)
            ' End If
         Next
         ' Salida de la simulación
